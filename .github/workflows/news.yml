@@ -49,16 +49,14 @@ jobs:
 
           echo "Attempting to upload $FILE_NAME to Folder ID: $FOLDER_ID"
 
-          # We are using the simplest possible POST to rule out metadata errors
           RESPONSE=$(curl --request POST \
-            --url "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart" \
+            --url "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&supportsAllDrives=true" \
             --header "Authorization: Bearer $TOKEN" \
             --form "metadata={name: '$FILE_NAME', parents: ['$FOLDER_ID']};type=application/json;charset=UTF-8" \
             --form "file=@$FILE_PATH;type=text/plain")
 
           echo "Full Google Response: $RESPONSE"
 
-          # Check if the response contains an ID
           if [[ $RESPONSE != *"\"id\":"* ]]; then
             echo "Error: Upload did not return a file ID."
             exit 1
