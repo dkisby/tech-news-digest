@@ -30,18 +30,6 @@ jobs:
       - name: Run news script
         run: python main.py
 
-      - name: Commit and push digest
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add out/
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Update tech news digest"
-            git push
-          fi
-
       - name: Authenticate to Google Cloud
         id: auth
         uses: google-github-actions/auth@v2
