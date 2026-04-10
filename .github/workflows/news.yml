@@ -40,8 +40,9 @@ jobs:
           access_token_scopes: 'https://www.googleapis.com/auth/drive'
 
       - name: Upload digest to Google Drive
-        uses: willo32/google-drive-upload-action@v1
+        uses: adityak74/google-drive-upload-git-action@main
         with:
           credentials: ${{ steps.auth.outputs.access_token }}
-          target: out/tech-news-latest.txt
-          parent_folder_id: ${{ secrets.GCP_DRIVE_FOLDER_ID }}
+          filename: out/tech-news-latest.txt
+          folderId: ${{ secrets.GCP_DRIVE_FOLDER_ID }}
+          overwrite: true
