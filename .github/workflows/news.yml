@@ -37,3 +37,17 @@ jobs:
             git commit -m "Update tech news digest"
             git push
           fi
+
+      - name: Authenticate to Google Cloud
+        id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: "projects/${{ secrets.GCP_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ secrets.GCP_WIF_POOL }}/providers/${{ secrets.GCP_WIF_PROVIDER }}"
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      - name: Upload digest to Google Drive
+        uses: willo32/google-drive-upload-action@v1
+        with:
+          token: ${{ steps.auth.outputs.access_token }}
+          file: out/tech-news-latest.txt
+          folderId: YOUR_DRIVE_FOLDER_ID
