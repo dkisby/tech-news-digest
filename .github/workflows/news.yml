@@ -36,16 +36,12 @@ jobs:
         with:
           workload_identity_provider: "projects/${{ secrets.GCP_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ secrets.GCP_WIF_POOL }}/providers/${{ secrets.GCP_WIF_PROVIDER }}"
           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
-          # This generates the short-lived token we need
           token_format: 'access_token'
           access_token_scopes: 'https://www.googleapis.com/auth/drive'
 
       - name: Upload digest to Google Drive
-        uses: skjnldsv/google-drive-upload-action@v1
+        uses: skjnldsv/google-drive-upload-git-action@v1
         with:
-          # Use the token from the step above
           token: ${{ steps.auth.outputs.access_token }}
-          # Path to your dated file
           path: out/tech-news-*.txt
-          # Your folder ID secret
           target: ${{ secrets.GCP_DRIVE_FOLDER_ID }}
