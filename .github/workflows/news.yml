@@ -40,7 +40,7 @@ jobs:
           access_token_scopes: 'https://www.googleapis.com/auth/drive'
 
       - name: Upload digest to Google Drive
-        uses: skjnldsv/google-drive-upload-git-action@v1
+        uses: skjnldsv/google-drive-upload-git-action@v1.1
         with:
           token: ${{ steps.auth.outputs.access_token }}
           path: out/tech-news-*.txt
