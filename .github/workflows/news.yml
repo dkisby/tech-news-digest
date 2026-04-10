@@ -4,10 +4,10 @@ on:
   schedule:
     - cron: "0 5 * * *"  # 06:00 UTC every day
   workflow_dispatch:      # allow manual runs too
-  
+
 permissions:
   id-token: write
-  contents: read
+  contents: write
 
 jobs:
   build:
