@@ -43,6 +43,6 @@ jobs:
         uses: adityak74/google-drive-upload-git-action@main
         with:
           credentials: ${{ steps.auth.outputs.access_token }}
-          filename: out/tech-news-latest.txt
+          filename: out/tech-news-*.txt
           folderId: ${{ secrets.GCP_DRIVE_FOLDER_ID }}
           overwrite: true
