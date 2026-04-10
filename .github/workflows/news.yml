@@ -42,6 +42,6 @@ jobs:
       - name: Upload digest to Google Drive
         uses: willo32/google-drive-upload-action@v1
         with:
-          token: ${{ steps.auth.outputs.access_token }}
-          file: out/tech-news-latest.txt
-          folderId: 'YOUR_FOLDER_ID_HERE'
+          credentials: ${{ steps.auth.outputs.access_token }}
+          target: out/tech-news-latest.txt
+          parent_folder_id: ${{ secrets.GCP_DRIVE_FOLDER_ID }}
