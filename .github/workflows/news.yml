@@ -36,10 +36,12 @@ jobs:
         with:
           workload_identity_provider: "projects/${{ secrets.GCP_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ secrets.GCP_WIF_POOL }}/providers/${{ secrets.GCP_WIF_PROVIDER }}"
           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+          token_format: 'access_token'
+          access_token_scopes: 'https://www.googleapis.com/auth/drive'
 
       - name: Upload digest to Google Drive
         uses: willo32/google-drive-upload-action@v1
         with:
           token: ${{ steps.auth.outputs.access_token }}
           file: out/tech-news-latest.txt
-          folderId: YOUR_DRIVE_FOLDER_ID
+          folderId: 'YOUR_FOLDER_ID_HERE'
