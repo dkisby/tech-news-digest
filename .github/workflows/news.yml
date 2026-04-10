@@ -41,19 +41,32 @@ jobs:
 
       - name: Upload digest to Google Drive
         run: |
-          # 1. Identify the file created by the Python script (handles the date wildcard)
           FILE_PATH=$(ls out/tech-news-*.txt | head -n 1)
           FILE_NAME=$(basename "$FILE_PATH")
+          FOLDER_ID="${{ secrets.GCP_DRIVE_FOLDER_ID }}"
+          TOKEN="${{ steps.auth.outputs.access_token }}"
+
+          echo "Searching for existing file: $FILE_NAME"
           
-          if [ -z "$FILE_PATH" ]; then
-            echo "Error: No news file found in out/ directory"
-            exit 1
+          # Check if file already exists in the folder
+          SEARCH_RESPONSE=$(curl -s -G "https://www.googleapis.com/drive/v3/files" \
+            -H "Authorization: Bearer $TOKEN" \
+            --data-urlencode "q='${FOLDER_ID}' in parents and name='${FILE_NAME}' and trashed=false" \
+            --data-urlencode "fields=files(id)")
+          
+          FILE_ID=$(echo $SEARCH_RESPONSE | jq -r '.files[0].id // empty')
+
+          if [ -n "$FILE_ID" ]; then
+            echo "File exists (ID: $FILE_ID). Updating content..."
+            curl -X PATCH \
+              -H "Authorization: Bearer $TOKEN" \
+              -F "file=@$FILE_PATH;type=text/plain" \
+              "https://www.googleapis.com/upload/drive/v3/files/$FILE_ID?uploadType=media"
+          else
+            echo "File not found. Creating new file..."
+            curl -X POST \
+              -H "Authorization: Bearer $TOKEN" \
+              -F "metadata={name: '$FILE_NAME', parents: ['$FOLDER_ID']};type=application/json;charset=UTF-8" \
+              -F "file=@$FILE_PATH;type=text/plain" \
+              "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart"
           fi
-
-          echo "Uploading $FILE_NAME to Google Drive folder ${{ secrets.GCP_DRIVE_FOLDER_ID }}..."
-
-          curl -X POST \
-            -H "Authorization: Bearer ${{ steps.auth.outputs.access_token }}" \
-            -F "metadata={name: '$FILE_NAME', parents: ['${{ secrets.GCP_DRIVE_FOLDER_ID }}']};type=application/json;charset=UTF-8" \
-            -F "file=@$FILE_PATH;type=text/plain" \
-            "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart"
