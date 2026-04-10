@@ -6,6 +6,14 @@ Source: https://tldr.tech/newsletter.xml
 
 Source: https://feeds.arstechnica.com/arstechnica/index
 ------------------------------------------------------------
+Title: Here's what to expect from the fiery, 14-minute return of Artemis II
+Link: https://arstechnica.com/space/2026/04/heres-what-to-expect-from-the-fiery-14-minute-return-of-artemis-ii/
+Summary: "Let’s not beat around the bush—we have to hit that angle correctly."
+
+Title: Pro-Iran Explosive Media trolls Trump with AI-generated Lego cartoons
+Link: https://arstechnica.com/culture/2026/04/pro-iran-explosive-media-trolls-trump-with-ai-generated-lego-cartoons/
+Summary: Group has released over a dozen videos mocking President Trump and the US.
+
 Title: Dad stuck in support nightmare after teen lied about age on Discord
 Link: https://arstechnica.com/tech-policy/2026/04/dad-stuck-in-support-nightmare-after-teen-lied-about-age-on-discord/
 Summary: Data dump confirms dad's suspicions that Discord knew teen's age prior to hack.
@@ -14,7 +22,7 @@ Title: Rocket Report: Chinese version of Falcon 9 fails; Artemis depends on rapi
 Link: https://arstechnica.com/space/2026/04/rocket-report-price-parity-between-ariane-6-and-falcon-9-isar-stands-down/
 Summary: “As space becomes increasingly strategic, access is no longer a luxury."
 
-Title: Orion helium leak no threat to Artemis II reentry, but will require redesign
+Title: Orion helium leak no threat to Artemis II reentry but will require redesign
 Link: https://arstechnica.com/space/2026/04/nasa-homes-in-on-likely-redesign-to-fix-orion-spacecrafts-leaky-valves/
 Summary: After leaks on Artemis I and II, Orion's next flight to the Moon will need new valves.
 
@@ -38,17 +46,17 @@ Title: Ugandan chimps split into two factions, then killed rivals
 Link: https://arstechnica.com/science/2026/04/ugandan-chimps-split-into-two-factions-then-killed-rivals/
 Summary: Rare event suggests relational dynamics may play a role in collective violence, along with cultural markers.
 
-Title: The gravity of their experience hasn't quite set in for the Artemis II astronauts
-Link: https://arstechnica.com/space/2026/04/astronauts-recall-the-sci-fi-experience-of-flying-in-the-shadow-of-the-moon/
-Summary: "I'm actually getting chills right now just thinking about it. My palms are sweating."
-
-Title: Trump-appointed judges refuse to block Trump blacklisting of Anthropic AI tech
-Link: https://arstechnica.com/tech-policy/2026/04/trump-appointed-judges-refuse-to-block-trump-blacklisting-of-anthropic-ai-tech/
-Summary: Appeals court denies Anthropic's emergency motion for a stay.
-
 
 Source: https://www.theverge.com/rss/index.xml
 ------------------------------------------------------------
+Title: Bose’s rugged Soundlink Flex Bluetooth speaker is on sale for up to $50 off
+Link: https://www.theverge.com/gadgets/907744/bose-soundlink-flex-2nd-gen-google-nest-doorbell-deal-sale
+Summary: We saw a host of excellent Bose discounts during Amazon’s so-called Big Spring Sale last month; however, none of them were quite as steep as the current price drop we’re seeing on the latest Bose Soundlink Flex. Right now, the portable speaker is on sale at Amazon in select colors starting at $109 ($50 off), [&#8230;]
+
+Title: Trump Mobile isn’t giving up just yet
+Link: https://www.theverge.com/tech/909846/trump-mobile-phone-47-plan-trademark-registration
+Summary: Where's the Trump phone? We're going to keep talking about it every week. We've reached out, as usual, to ask about the Trump phone's whereabouts. We're back to being ignored, but the company is showing signs of life. It's been nine months since Trump Mobile announced itself, seven months since the company updated any of [&#8230;]
+
 Title: Why your Whoop might tell you to up your testosterone
 Link: https://www.theverge.com/column/909736/optimizer-whoop-oura-wearable-hype-cycle
 Summary: This is Optimizer, a weekly newsletter sent every Friday from Verge senior reviewer Victoria Song that dissects and discusses the latest gizmos and potions that swear they're going to change your life. Opt in for Optimizer here. Last week, our editor-in-chief Nilay Patel messaged me about his new Whoop band, which he'd gotten thanks to [&#8230;]
@@ -81,86 +89,79 @@ Title: Microsoft starts removing Copilot buttons from Windows 11 apps
 Link: https://www.theverge.com/news/909640/microsoft-removing-copilot-windows-11-buttons
 Summary: Microsoft is starting to remove "unnecessary" Copilot buttons from its Windows 11 apps. In the latest version of the Notepad app for Windows Insiders, Microsoft has removed the Copilot button in favor of a "writing tools" menu. The Copilot button in the Snipping Tool app also no longer appears when you select an area to [&#8230;]
 
-Title: ChatGPT has a new $100 per month Pro subscription
-Link: https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new
-Summary: OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers "5x more" usage of its Codex coding tool than the $20 per month Plus subscription and "is best for longer, high-effort Codex sessions," OpenAI says. The company is introducing the new tier as it [&#8230;]
-
-Title: Here are the best Apple Watch deals available right now
-Link: https://www.theverge.com/21289209/best-apple-watch-deals
-Summary: In September, Apple launched its latest batch of smartwatches, including the Apple Watch Series 11, the SE 3, and the Ultra 3. Each has its own pros and cons, but the introduction of Apple’s newest wearables also means there are now more Apple Watch models on the market than ever before — and a lot [&#8230;]
-
 
 Source: https://hnrss.org/frontpage
 ------------------------------------------------------------
+Title: CPU-Z and HWMonitor Compromised
+Link: https://old.reddit.com/r/pcmasterrace/comments/1sh4e5l/warning_hwmonitor_163_download_on_the_official/
+Summary: <p>Article URL: <a href="https://old.reddit.com/r/pcmasterrace/comments/1sh4e5l/warning_hwmonitor_163_download_on_the_official/">https://old.reddit.com/r/pcmasterrace/comments/1sh4e5l/warning_hwmonitor_163_download_on_the_official/</a></p>
+<p>Comments URL: <a href="https://news.ycombinator.com/item?id=47718830">https://news.ycombinator.com/item?id=47718830</a></p>
+<p>Points: 36</p>
+<p># Comments: 6</p>
+
+Title: Why do we tell ourselves scary stories about AI?
+Link: https://www.quantamagazine.org/why-do-we-tell-ourselves-scary-stories-about-ai-20260410/
+Summary: <p>Article URL: <a href="https://www.quantamagazine.org/why-do-we-tell-ourselves-scary-stories-about-ai-20260410/">https://www.quantamagazine.org/why-do-we-tell-ourselves-scary-stories-about-ai-20260410/</a></p>
+<p>Comments URL: <a href="https://news.ycombinator.com/item?id=47718812">https://news.ycombinator.com/item?id=47718812</a></p>
+<p>Points: 18</p>
+<p># Comments: 27</p>
+
+Title: Code is run more than read (2023)
+Link: https://olano.dev/blog/code-is-run-more-than-read/
+Summary: <p>Article URL: <a href="https://olano.dev/blog/code-is-run-more-than-read/">https://olano.dev/blog/code-is-run-more-than-read/</a></p>
+<p>Comments URL: <a href="https://news.ycombinator.com/item?id=47718470">https://news.ycombinator.com/item?id=47718470</a></p>
+<p>Points: 11</p>
+<p># Comments: 0</p>
+
+Title: Tech job relocation market is recovering. The competition is growing faster
+Link: https://relocateme.substack.com/p/the-tech-relocation-job-market-is
+Summary: <p>Article URL: <a href="https://relocateme.substack.com/p/the-tech-relocation-job-market-is">https://relocateme.substack.com/p/the-tech-relocation-job-market-is</a></p>
+<p>Comments URL: <a href="https://news.ycombinator.com/item?id=47718458">https://news.ycombinator.com/item?id=47718458</a></p>
+<p>Points: 16</p>
+<p># Comments: 0</p>
+
+Title: US summons bank bosses over cyber risks from Anthropic's latest AI model
+Link: https://www.theguardian.com/technology/2026/apr/10/us-summoned-bank-bosses-to-discuss-cyber-risks-posed-by-anthropic-latest-ai-model
+Summary: <p>Article URL: <a href="https://www.theguardian.com/technology/2026/apr/10/us-summoned-bank-bosses-to-discuss-cyber-risks-posed-by-anthropic-latest-ai-model">https://www.theguardian.com/technology/2026/apr/10/us-summoned-bank-bosses-to-discuss-cyber-risks-posed-by-anthropic-latest-ai-model</a></p>
+<p>Comments URL: <a href="https://news.ycombinator.com/item?id=47718114">https://news.ycombinator.com/item?id=47718114</a></p>
+<p>Points: 10</p>
+<p># Comments: 1</p>
+
 Title: The effects of caffeine consumption do not decay with a ~5 hour half-life
 Link: https://www.lesswrong.com/posts/vefsxkGWkEMmDcZ7v/the-effects-of-caffeine-consumption-do-not-decay-with-a-5
 Summary: <p>Article URL: <a href="https://www.lesswrong.com/posts/vefsxkGWkEMmDcZ7v/the-effects-of-caffeine-consumption-do-not-decay-with-a-5">https://www.lesswrong.com/posts/vefsxkGWkEMmDcZ7v/the-effects-of-caffeine-consumption-do-not-decay-with-a-5</a></p>
 <p>Comments URL: <a href="https://news.ycombinator.com/item?id=47717973">https://news.ycombinator.com/item?id=47717973</a></p>
-<p>Points: 10</p>
-<p># Comments: 3</p>
+<p>Points: 52</p>
+<p># Comments: 38</p>
 
-Title: OpenAI Backs Bill That Would Limit Liability for AI-Enabled Mass Deaths
+Title: OpenAI backs Illinois bill that would limit when AI labs can be held liable
 Link: https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/
-Summary: <p>Article URL: <a href="https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/">https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/</a></p>
+Summary: <p><a href="https://archive.md/WzwBY" rel="nofollow">https://archive.md/WzwBY</a></p>
+<hr />
 <p>Comments URL: <a href="https://news.ycombinator.com/item?id=47717587">https://news.ycombinator.com/item?id=47717587</a></p>
-<p>Points: 191</p>
-<p># Comments: 115</p>
+<p>Points: 320</p>
+<p># Comments: 219</p>
 
 Title: Intel 486 CPU announced April 10, 1989
 Link: https://dfarq.homeip.net/intel-486-cpu-announced-april-10-1989/
 Summary: <p>Article URL: <a href="https://dfarq.homeip.net/intel-486-cpu-announced-april-10-1989/">https://dfarq.homeip.net/intel-486-cpu-announced-april-10-1989/</a></p>
 <p>Comments URL: <a href="https://news.ycombinator.com/item?id=47716809">https://news.ycombinator.com/item?id=47716809</a></p>
-<p>Points: 71</p>
-<p># Comments: 49</p>
-
-Title: White House staff told not to place bets on prediction markets
-Link: https://www.bbc.co.uk/news/articles/cgld65x396go
-Summary: <p>Article URL: <a href="https://www.bbc.co.uk/news/articles/cgld65x396go">https://www.bbc.co.uk/news/articles/cgld65x396go</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=47716663">https://news.ycombinator.com/item?id=47716663</a></p>
-<p>Points: 94</p>
-<p># Comments: 51</p>
+<p>Points: 103</p>
+<p># Comments: 81</p>
 
 Title: FBI used iPhone notification data to retrieve deleted Signal messages
 Link: https://9to5mac.com/2026/04/09/fbi-used-iphone-notification-data-to-retrieve-deleted-signal-messages/
 Summary: <p>Article URL: <a href="https://9to5mac.com/2026/04/09/fbi-used-iphone-notification-data-to-retrieve-deleted-signal-messages/">https://9to5mac.com/2026/04/09/fbi-used-iphone-notification-data-to-retrieve-deleted-signal-messages/</a></p>
 <p>Comments URL: <a href="https://news.ycombinator.com/item?id=47716490">https://news.ycombinator.com/item?id=47716490</a></p>
-<p>Points: 168</p>
-<p># Comments: 78</p>
-
-Title: Ads in ChatGPT
-Link: https://help.openai.com/en/articles/20001047-ads-in-chatgpt
-Summary: <p>Article URL: <a href="https://help.openai.com/en/articles/20001047-ads-in-chatgpt">https://help.openai.com/en/articles/20001047-ads-in-chatgpt</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=47716063">https://news.ycombinator.com/item?id=47716063</a></p>
-<p>Points: 9</p>
-<p># Comments: 1</p>
-
-Title: France Launches Government Linux Desktop Plan as Windows Exit Begins
-Link: https://www.numerique.gouv.fr/sinformer/espace-presse/souverainete-numerique-reduction-dependances-extra-europeennes/
-Summary: <p>Article URL: <a href="https://www.numerique.gouv.fr/sinformer/espace-presse/souverainete-numerique-reduction-dependances-extra-europeennes/">https://www.numerique.gouv.fr/sinformer/espace-presse/souverainete-numerique-reduction-dependances-extra-europeennes/</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=47716043">https://news.ycombinator.com/item?id=47716043</a></p>
-<p>Points: 716</p>
-<p># Comments: 328</p>
+<p>Points: 274</p>
+<p># Comments: 121</p>
 
 Title: Show HN: Keeper – embedded secret store for Go (help me break it)
 Link: https://github.com/agberohq/keeper
 Summary: <p>Keeper is an embeddable secret store (Argon2id, XChaCha20-Poly1305 by default). Four security levels, audit chains, crash-safe rotation. Vault is overkill for most use cases. This is for when  you ge paranoid about env and need encrypted local storage that doesn't suck. No security through obscurity, hence, It's still early, so now's the best time to find weird edge cases, race conditions, memory leaks, crypto misuse, anything that breaks. The README has a full security model breakdown if you want to get adversarial.</p>
 <hr />
 <p>Comments URL: <a href="https://news.ycombinator.com/item?id=47715339">https://news.ycombinator.com/item?id=47715339</a></p>
-<p>Points: 43</p>
-<p># Comments: 25</p>
-
-Title: Artemis II and the invisible hazard on the way to the Moon
-Link: https://www.ansto.gov.au/news/artemis-ii-and-invisible-hazard-on-way-to-moon-part-1
-Summary: <p>Article URL: <a href="https://www.ansto.gov.au/news/artemis-ii-and-invisible-hazard-on-way-to-moon-part-1">https://www.ansto.gov.au/news/artemis-ii-and-invisible-hazard-on-way-to-moon-part-1</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=47714573">https://news.ycombinator.com/item?id=47714573</a></p>
-<p>Points: 50</p>
-<p># Comments: 39</p>
-
-Title: Penguin 'Toxicologists' Find PFAS Chemicals in Remote Patagonia
-Link: https://www.ucdavis.edu/health/news/penguin-toxicologists-find-pfas-chemicals-remote-patagonia
-Summary: <p>Article URL: <a href="https://www.ucdavis.edu/health/news/penguin-toxicologists-find-pfas-chemicals-remote-patagonia">https://www.ucdavis.edu/health/news/penguin-toxicologists-find-pfas-chemicals-remote-patagonia</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=47714273">https://news.ycombinator.com/item?id=47714273</a></p>
-<p>Points: 61</p>
-<p># Comments: 14</p>
+<p>Points: 48</p>
+<p># Comments: 26</p>
 
 
