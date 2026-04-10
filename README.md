@@ -1,2 +1,2 @@
 # tech-news-digest
-My Tech New Digest for automation
+My automated Tech News Digest
