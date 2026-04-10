@@ -2,8 +2,8 @@ name: Daily Tech News Digest
 
 on:
   schedule:
-    - cron: "0 5 * * *"  # 06:00 UTC every day
-  workflow_dispatch:      # allow manual runs too
+    - cron: "0 5 * * *" 
+  workflow_dispatch:      
 
 permissions:
   id-token: write
@@ -36,13 +36,16 @@ jobs:
         with:
           workload_identity_provider: "projects/${{ secrets.GCP_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ secrets.GCP_WIF_POOL }}/providers/${{ secrets.GCP_WIF_PROVIDER }}"
           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+          # This generates the short-lived token we need
           token_format: 'access_token'
           access_token_scopes: 'https://www.googleapis.com/auth/drive'
 
       - name: Upload digest to Google Drive
-        uses: adityak74/google-drive-upload-git-action@main
+        uses: skjnldsv/google-drive-upload-action@v1
         with:
-          credentials: ${{ steps.auth.outputs.access_token }}
-          filename: out/tech-news-*.txt
-          folderId: ${{ secrets.GCP_DRIVE_FOLDER_ID }}
-          overwrite: true
+          # Use the token from the step above
+          token: ${{ steps.auth.outputs.access_token }}
+          # Path to your dated file
+          path: out/tech-news-*.txt
+          # Your folder ID secret
+          target: ${{ secrets.GCP_DRIVE_FOLDER_ID }}
