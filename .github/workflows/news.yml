@@ -2,12 +2,8 @@ name: Daily Tech News Digest
 
 on:
   schedule:
-    - cron: "0 5 * * *"  # 06:00 UTC every day
+    - cron: "0 5 * * *" 
   workflow_dispatch:      
-
-permissions:
-  id-token: write
-  contents: write
 
 jobs:
   build:
@@ -30,34 +26,12 @@ jobs:
       - name: Run news script
         run: python main.py
 
-      - name: Authenticate to Google Cloud
-        id: auth
-        uses: google-github-actions/auth@v2
+      - name: Upload to Google Drive
+        uses: ccollins476/google-drive-upload-action@v1.5.1
         with:
-          workload_identity_provider: "projects/${{ secrets.GCP_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ secrets.GCP_WIF_POOL }}/providers/${{ secrets.GCP_WIF_PROVIDER }}"
-          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
-          token_format: 'access_token'
-          access_token_scopes: 'https://www.googleapis.com/auth/drive'
-
-      - name: Upload digest to Google Drive
-        run: |
-          set -e
-          FILE_PATH=$(ls out/tech-news-*.txt | head -n 1)
-          FILE_NAME=$(basename "$FILE_PATH")
-          FOLDER_ID="${{ secrets.GCP_DRIVE_FOLDER_ID }}"
-          TOKEN="${{ steps.auth.outputs.access_token }}"
-
-          echo "Attempting to upload $FILE_NAME to Folder ID: $FOLDER_ID"
-
-          RESPONSE=$(curl --request POST \
-            --url "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&supportsAllDrives=true" \
-            --header "Authorization: Bearer $TOKEN" \
-            --form "metadata={name: '$FILE_NAME', parents: ['$FOLDER_ID']};type=application/json;charset=UTF-8" \
-            --form "file=@$FILE_PATH;type=text/plain")
-
-          echo "Full Google Response: $RESPONSE"
-
-          if [[ $RESPONSE != *"\"id\":"* ]]; then
-            echo "Error: Upload did not return a file ID."
-            exit 1
-          fi
+          client_id: ${{ secrets.DRIVE_CLIENT_ID }}
+          client_secret: ${{ secrets.DRIVE_CLIENT_SECRET }}
+          refresh_token: ${{ secrets.DRIVE_REFRESH_TOKEN }}
+          filename: out/tech-news-*.txt
+          folderId: ${{ secrets.GCP_DRIVE_FOLDER_ID }}
+          overwrite: true
