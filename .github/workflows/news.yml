@@ -34,43 +34,36 @@ jobs:
           DOC_ID: ${{ secrets.MASTER_DOC_ID }}
         run: |
           python - <<EOF
-          import os
-          import glob
+          import os, glob, re
           from google.oauth2.credentials import Credentials
           from googleapiclient.discovery import build
 
-          creds = Credentials(
-              None,
-              refresh_token=os.getenv('REFRESH_TOKEN'),
-              token_uri="https://oauth2.googleapis.com/token",
-              client_id=os.getenv('CLIENT_ID'),
-              client_secret=os.getenv('CLIENT_SECRET'),
-          )
-
+          creds = Credentials(None, refresh_token=os.getenv('REFRESH_TOKEN'), 
+                              token_uri="https://oauth2.googleapis.com/token",
+                              client_id=os.getenv('CLIENT_ID'), client_secret=os.getenv('CLIENT_SECRET'))
           service = build('docs', 'v1', credentials=creds)
 
           files = glob.glob('out/tech-news-*.txt')
-          if not files:
-              print("No news file found.")
-              exit(1)
-          
           latest_file = max(files, key=os.path.getctime)
           with open(latest_file, 'r', encoding='utf-8') as f:
-              new_content = f.read()
+              content = f.read()
 
-          requests = [
-              {
-                  'insertText': {
-                      'location': {'index': 1},
-                      'text': new_content + "\n\n" + ("=" * 40) + "\n\n"
-                  }
-              }
-          ]
+          requests = [{'insertText': {'location': {'index': 1}, 'text': content + "\n\n" + ("="*30) + "\n\n"}}]
+          
+          current_index = 1
+          for line in content.split('\n'):
+              if line.startswith("Link: "):
+                  url = line.replace("Link: ", "").strip()
+                  start = content.find(url) + 1 # +1 because we insert at index 1
+                  if start > 0:
+                      requests.append({
+                          'updateTextStyle': {
+                              'range': {'startIndex': start, 'endIndex': start + len(url)},
+                              'textStyle': {'link': {'url': url}},
+                              'fields': 'link'
+                          }
+                      })
 
-          service.documents().batchUpdate(
-              documentId=os.getenv('DOC_ID'),
-              body={'requests': requests}
-          ).execute()
-
-          print(f"Successfully appended {latest_file} to Master Doc!")
+          service.documents().batchUpdate(documentId=os.getenv('DOC_ID'), body={'requests': requests}).execute()
+          print("Successfully appended with clickable links!")
           EOF
